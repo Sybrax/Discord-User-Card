@@ -12,10 +12,18 @@ body {
   background: #1e1e1e;
 }
 
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 650px;
+}
+
 .card {
   box-sizing: border-box;
   background: #171717;
   width: 300px;
+  height: max-content;
   overflow: hidden;
   border-radius: 9px;
   -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
@@ -167,7 +175,7 @@ body {
 }
 
 .card-content .note textarea:focus {
-  background: #292929;
+  background: #1f1f1f;
 }
 
 .card-footer {
