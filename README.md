@@ -16,6 +16,7 @@ The card when you click in a user on a discord server.
 + Roles
 + Note
 + Send message input
++ Basic JavaSript for the demo
 
 ## Preview :
 
