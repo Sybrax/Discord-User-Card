@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Whitney", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1e1e;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1000px;
+}
+
+.card {
+  box-sizing: border-box;
+  background: #171717;
+  width: 300px;
+  height: max-content;
+  overflow: hidden;
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  position: relative;
+}
+
+.card-header .banner {
+  width: 100%;
+  height: 60px;
+  background: #ff8527;
+}
+
+.card-header .infos {
+  padding: 0 15px;
+}
+
+.card-header .infos .profil-logo {
+  position: absolute;
+  top: 16px;
+}
+
+.card-header .infos .profil-logo img {
+  width: 80px;
+  border: 6px solid #171717;
+  border-radius: 50%;
+}
+
+.card-header .infos .profil-logo::before {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 87%;
+  height: 84%;
+  border: 6px solid #171717;
+  content: "See Profil";
+  color: #eeeeee;
+  background: #0000007e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  transition-duration: 0.15s;
+}
+
+.card-header .infos .profil-logo:hover::before {
+  opacity: 1;
+}
+
+.card-header .infos .username {
+  color: #eeeeee;
+  margin-top: 55px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.card-header .infos .username span {
+  font-weight: 500;
+  color: #8f8f8f;
+}
+
+.card-header .infos hr {
+  border: 1px solid #212121;
+}
+
+.card-content {
+  padding: 0 15px;
+}
+
+.card-content .category-title {
+  color: #c2c2c2;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.card-content .about-me {
+  margin-bottom: 12px;
+  margin-top: 10px;
+}
+
+.card-content .about-me p {
+  color: #eee;
+  font-size: 0.9rem;
+}
+
+.card-content .roles {
+  margin-bottom: 12px;
+}
+
+.card-content .roles .roles-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-content .roles .roles-list .role {
+  background: #353535;
+  color: #f5f5f5;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 300;
+  padding: 2px 6px;
+  margin-right: 4px;
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.card-content .roles .roles-list .role .color {
+  width: 11px;
+  height: 11px;
+  background: orange;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.card-content .note {
+  margin-bottom: 15px;
+}
+
+.card-content .note textarea {
+  border: none;
+  outline: none;
+  background: #171717;
+  width: 100%;
+  min-height: 30px;
+  color: #e0e0e0;
+  resize: none;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  padding: 5px;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  font-family: "Whitney", sans-serif;
+}
+
+.card-content .note textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.card-content .note textarea::placeholder {
+  font-size: 0.7rem;
+}
+
+.card-content .note textarea:focus {
+  background: #1f1f1f;
+}
+
+.card-footer {
+  padding: 0 15px 15px 15px;
+}
+
+.card-footer input {
+  background: #353535;
+  outline: none;
+  border: 1.5px solid #333333;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 3px;
+  color: #eeeeee;
+  transition-duration: 0.3s;
+}
+
+.card-footer input:focus {
+  border-color: orange;
+}
