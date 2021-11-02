@@ -8,7 +8,7 @@
 
 ## Description :
 
-The card when you click in a user in a discord server.
+The card when you click in a user on a discord server.
 
 + Banner & Logo
 + Username
