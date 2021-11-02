@@ -17,6 +17,10 @@ The card when you click in a user in a discord server.
 + Note
 + Send message input
 
+## Preview :
+
+<img src="https://i.imgur.com/NDauU1d.png">
+
 ## Author :
 
 <p>
