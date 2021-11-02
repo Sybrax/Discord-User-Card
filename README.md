@@ -19,7 +19,7 @@ The card when you click in a user on a discord server.
 
 ## Preview :
 
-<img src="https://i.imgur.com/iAljyb2.png">
+<img src="https://i.imgur.com/RnEVJhP.png">
 
 ## Author :
 
