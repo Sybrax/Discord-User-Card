@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 650px;
+  width: 1000px;
 }
 
 .card {
@@ -150,6 +150,10 @@ body {
   margin-right: 5px;
 }
 
+.card-content .note {
+  margin-bottom: 15px;
+}
+
 .card-content .note textarea {
   border: none;
   outline: none;
@@ -179,7 +183,7 @@ body {
 }
 
 .card-footer {
-  padding: 15px;
+  padding: 0 15px 15px 15px;
 }
 
 .card-footer input {
