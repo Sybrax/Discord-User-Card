@@ -26,10 +26,17 @@ body {
   background: #171717;
   width: 300px;
   height: max-content;
+  max-height: 90vh;
   overflow: hidden;
   border-radius: 9px;
   -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+.card::-webkit-scrollbar {
+  display: none;
 }
 
 .card-header {
