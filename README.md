@@ -22,6 +22,8 @@ The card when you click in a user on a discord server.
 
 <img src="https://i.imgur.com/CyPg6Bx.png">
 
+Demo : <a href="https://sybrax.github.io/Discord-User-Card/">Demo link</a>
+
 ## Author :
 
 <p>
