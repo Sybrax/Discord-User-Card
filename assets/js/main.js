@@ -14,6 +14,6 @@ for (let i = 0; i < input.length; i++) {
 for (let i = 0; i < pflogo.length; i++) {
   const logo = pflogo[i];
   logo.addEventListener("click", () => {
-    alert("Le système n'est pas fait, à vous de le faire haha !");
+    console.log("You clicked on logo !");
   });
 }

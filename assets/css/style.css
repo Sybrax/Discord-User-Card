@@ -16,7 +16,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1000px;
+  width: 1350px;
 }
 
 .card {
@@ -40,6 +40,13 @@ body {
   background: #ff8527;
 }
 
+.card-header .banner-image {
+  width: 100%;
+  height: 120px;
+  background-position: center !important;
+  background-size: 100% auto !important;
+}
+
 .card-header .infos {
   padding: 0 15px;
 }
@@ -49,13 +56,21 @@ body {
   top: 16px;
 }
 
-.card-header .infos .profil-logo img {
+.card-header .infos .profil-logo-image {
+  position: absolute;
+  top: 76px;
+}
+
+.card-header .infos .profil-logo img,
+.card-header .infos .profil-logo-image img {
   width: 80px;
+  height: 80px;
   border: 6px solid #171717;
   border-radius: 50%;
 }
 
-.card-header .infos .profil-logo::before {
+.card-header .infos .profil-logo::before,
+.card-header .infos .profil-logo-image::before {
   opacity: 0;
   cursor: pointer;
   position: absolute;
@@ -76,7 +91,8 @@ body {
   transition-duration: 0.15s;
 }
 
-.card-header .infos .profil-logo:hover::before {
+.card-header .infos .profil-logo:hover::before,
+.card-header .infos .profil-logo-image:hover::before {
   opacity: 1;
 }
 
