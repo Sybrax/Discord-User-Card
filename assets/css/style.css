@@ -226,3 +226,30 @@ body {
 .card-footer input:focus {
   border-color: orange;
 }
+
+@media screen and (max-width: 1400px) {
+  .card-container {
+    width: 960px;
+  }
+  .card:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .card-container {
+    width: 650px;
+  }
+  .card:nth-child(3) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .card-container {
+    width: 300px;
+  }
+  .card:nth-child(2) {
+    display: none;
+  }
+}
