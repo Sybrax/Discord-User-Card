@@ -24,6 +24,7 @@ html {
   border-radius: 3px;
   max-width: 150px;
   width: max-content;
+  font-size: 0.83rem;
 }
 
 .tooltip-up {
