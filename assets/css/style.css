@@ -15,6 +15,34 @@ html {
   background: #1e1e1e;
 }
 
+.tooltip {
+  display: none;
+  position: absolute;
+  color: #eeeeee;
+  background: #202020;
+  padding: 5px 4px;
+  border-radius: 3px;
+  max-width: 150px;
+  width: max-content;
+}
+
+.tooltip-up {
+  bottom: 42px;
+  right: -10px;
+}
+
+.tooltip-up::before {
+  content: "";
+  position: absolute;
+  right: 10px;
+  bottom: -6px;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #202020;
+}
+
 .card-container {
   display: flex;
   flex-direction: row;
@@ -27,8 +55,7 @@ html {
   background: #171717;
   width: 300px;
   height: max-content;
-  max-height: 90vh;
-  overflow: hidden;
+  max-height: 95%;
   border-radius: 9px;
   -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
@@ -38,10 +65,6 @@ html {
 
 .card::-webkit-scrollbar {
   display: none;
-}
-
-.card-header {
-  position: relative;
 }
 
 .card-header .banner {
@@ -59,28 +82,22 @@ html {
 
 .card-header .infos {
   padding: 0 15px;
+  position: relative;
 }
 
 .card-header .infos .profil-logo {
   position: absolute;
-  top: 16px;
+  top: -280%;
 }
 
-.card-header .infos .profil-logo-image {
-  position: absolute;
-  top: 76px;
-}
-
-.card-header .infos .profil-logo img,
-.card-header .infos .profil-logo-image img {
+.card-header .infos .profil-logo img {
   width: 80px;
   height: 80px;
   border: 6px solid #171717;
   border-radius: 50%;
 }
 
-.card-header .infos .profil-logo::before,
-.card-header .infos .profil-logo-image::before {
+.card-header .infos .profil-logo::before {
   opacity: 0;
   cursor: pointer;
   position: absolute;
@@ -101,9 +118,36 @@ html {
   transition-duration: 0.15s;
 }
 
-.card-header .infos .profil-logo:hover::before,
-.card-header .infos .profil-logo-image:hover::before {
+.card-header .infos .profil-logo:hover::before {
   opacity: 1;
+}
+
+.card-header .infos .badges-container {
+  position: absolute;
+  top: -120%;
+  right: 0;
+  padding: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 160px;
+}
+
+.card-header .infos .badges-container .badge-item {
+  position: relative;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+}
+
+.card-header .infos .badges-container .badge-item img {
+  height: 100%;
+}
+
+.card-header .infos .badges-container .badge-item:hover > .tooltip {
+  display: block;
 }
 
 .card-header .infos .username {
