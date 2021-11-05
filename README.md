@@ -11,6 +11,7 @@
 The card when you click in a user on a discord server.
 
 + Banner & Logo
++ Badges with tooltip
 + Username
 + About Me
 + Roles
