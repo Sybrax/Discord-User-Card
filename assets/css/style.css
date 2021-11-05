@@ -27,7 +27,7 @@ html {
 }
 
 .tooltip-up {
-  bottom: 42px;
+  bottom: 40px;
   right: -10px;
 }
 
@@ -137,7 +137,7 @@ html {
   position: relative;
   margin-left: 8px;
   margin-bottom: 5px;
-  height: 17px;
+  height: 15px;
   display: flex;
   justify-content: center;
 }
