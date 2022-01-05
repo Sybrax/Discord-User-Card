@@ -299,3 +299,23 @@ html {
     display: none;
   }
 }
+
+/* Version Checker | You can delete */
+
+.updateVersion {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background-color: #000000be;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.updateVersion a {
+  color: #ff8527;
+  margin: 0 5px;
+}
