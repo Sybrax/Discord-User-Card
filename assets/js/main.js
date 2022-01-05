@@ -31,7 +31,7 @@ function versionUpdate(a, n) {
       const div = document.createElement("div");
       div.classList.add("updateVersion");
       div.setAttribute("onClick", "this.remove()");
-      div.innerHTML = `The version you are testing is not up to date (${a.version}), the latest version (${n.version}) is available on <a href="https://github.com/Sybrax/Discord-User-Card">github</a>.`;
+      div.innerHTML = `<p>The version you are testing is not up to date (${a.version}), the latest version (${n.version}) is available on <a href="https://github.com/Sybrax/Discord-User-Card">github</a>.</p>`;
 
       return div;
     });
