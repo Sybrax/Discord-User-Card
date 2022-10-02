@@ -29,30 +29,32 @@ html {
   display: none;
   position: absolute;
   color: #eeeeee;
-  background: #202020;
-  padding: 5px 4px;
+  background: #232323;
+  padding: 0.32rem 0.4rem;
   border-radius: 3px;
   max-width: 150px;
   width: max-content;
-  font-size: 0.83rem;
-  animation: popAnim 0.03s linear;
+  font-size: 0.82rem;
+  animation: popAnim 0.045s linear;
+  z-index: 10;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
 }
 
 .tooltip-up {
-  top: -40px;
-  right: -10px;
+  bottom: 35px;
 }
 
 .tooltip-up::before {
+  left: 50%;
+  transform: translateX(-50%);
   content: "";
   position: absolute;
-  right: 10px;
   bottom: -6px;
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #202020;
+  border-top: 6px solid #232323;
 }
 
 .card-container {
@@ -65,13 +67,13 @@ html {
 .card {
   box-sizing: border-box;
   background: #171717;
-  width: 300px;
+  min-width: 300px;
+  max-width: 300px;
   height: max-content;
   max-height: 95%;
   border-radius: 9px;
   -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
-  overflow: auto;
   scrollbar-width: none;
 }
 
@@ -83,6 +85,8 @@ html {
   width: 100%;
   height: 60px;
   background: #ff8527;
+  border-radius: 9px 9px 0 0;
+  overflow: hidden;
 }
 
 .card-header .banner-image {
@@ -90,6 +94,8 @@ html {
   height: 120px;
   background-position: center !important;
   background-size: 100% auto !important;
+  border-radius: 9px 9px 0 0;
+  overflow: hidden;
 }
 
 .card-header .infos {
@@ -127,6 +133,7 @@ html {
   align-items: center;
   justify-content: center;
   font-size: 0.7rem;
+  font-weight: 600;
   text-transform: uppercase;
   transition-duration: 0.15s;
 }
