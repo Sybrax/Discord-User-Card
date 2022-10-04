@@ -1,6 +1,6 @@
 <body style="width: 100%; height: 100%">
   
-  <h1 align="center">Discord User Card</h1>
+  <h1 align="center">Discord User Card - New version</h1>
   <p align="center">
     <a target='_blank' href='https://developer.mozilla.org/fr/'><img src="https://forthebadge.com/images/badges/uses-html.svg"></a>&nbsp<a target='_blank' href='https://developer.mozilla.org/fr/'><img src="https://forthebadge.com/images/badges/uses-css.svg"></a>&nbsp<a target='_blank' href='https://developer.mozilla.org/fr/'><img src="https://forthebadge.com/images/badges/uses-js.svg"></a>
   </p>
@@ -8,12 +8,13 @@
 
 ## Description :
 
-The card when you click in a user on a discord server.
+The card when you click on a user in a discord server.
 
 + Banner & Logo
 + Badges with tooltip
 + Username
 + About Me
++ Member since
 + Roles
 + Note
 + Send message input
@@ -21,7 +22,7 @@ The card when you click in a user on a discord server.
 
 ## Preview :
 
-<img src="https://i.imgur.com/s2hTmWR.png">
+<img src="https://i.imgur.com/J2WIRCs.png">
 
 Demo : <a href="https://sybrax.github.io/Discord-User-Card/">here</a>
 
