@@ -1,14 +1,26 @@
-const id = "G01-dsc";
-const version = "1.1.2";
+const input = document.querySelectorAll("input");
+const profilLogo = document.querySelectorAll(".profil-logo");
+const modal = document.querySelector(".modal-container");
 
-$("input").keyup(function (e) {
-  console.log(e.key);
-  if (e.key === "Enter") {
-    this.value = "";
-    this.blur();
-  }
+const toggleModal = () => {
+  modal.classList.toggle("active");
+};
+
+input.forEach((input) => {
+  input.addEventListener("keyup", (e) => {
+    if (e.key === "Enter") {
+      input.value = "";
+      input.blur();
+    }
+  });
 });
 
-$(".profil-logo").click(function () {
-  console.log("You clicked on logo !");
+profilLogo.forEach((logo) => {
+  logo.addEventListener("click", toggleModal);
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    toggleModal();
+  }
 });

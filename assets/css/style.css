@@ -1,6 +1,8 @@
+/* Import */
 @import url("../font/style.css");
 @import url("https://sybraxdesign.fr/api/github/version.css");
 
+/* Animations */
 @keyframes popAnim {
   from {
     transform: scale(0);
@@ -10,14 +12,16 @@
   }
 }
 
+/* General */
 * {
   margin: 0;
   padding: 0;
+  font-family: "Whitney", sans-serif;
+  box-sizing: border-box;
 }
 
 body,
 html {
-  font-family: "Whitney", sans-serif;
   height: 100%;
   display: flex;
   align-items: center;
@@ -29,51 +33,88 @@ html {
   display: none;
   position: absolute;
   color: #eeeeee;
-  background: #232323;
-  padding: 0.32rem 0.4rem;
+  background: #18191c;
+  padding: 0.4rem;
   border-radius: 3px;
   max-width: 150px;
   width: max-content;
-  font-size: 0.82rem;
-  animation: popAnim 0.045s linear;
+  font-size: 0.9rem;
+  animation: popAnim 0.035s linear;
   z-index: 10;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
 }
 
 .tooltip-up {
-  bottom: 35px;
+  bottom: 42px;
 }
 
 .tooltip-up::before {
-  left: 50%;
-  transform: translateX(-50%);
   content: "";
   position: absolute;
   bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
-  border-top: 6px solid #232323;
+  border-top: 6px solid #18191c;
 }
 
+.modal-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.modal {
+  position: relative;
+  background: #18191c;
+  padding: 15px;
+  color: #eee;
+  border-radius: 5px;
+  animation: popAnim 0.035s linear;
+}
+
+.modal a {
+  text-decoration: none;
+  color: #d6d6d6;
+  transition-duration: 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.modal a:hover {
+  color: #fff;
+  border-bottom: 1px solid #f87610;
+}
+
+.active {
+  display: flex;
+}
+
+/* Card */
 .card-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 1350px;
+  width: 1450px;
 }
 
 .card {
-  box-sizing: border-box;
-  background: #171717;
-  min-width: 300px;
-  max-width: 300px;
-  height: max-content;
+  background: #292b2f;
+  width: 345px;
   max-height: 95%;
+  height: max-content;
   border-radius: 9px;
-  -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 0px 16px 3px rgba(0, 0, 0, 0.2);
   scrollbar-width: none;
 }
 
@@ -89,7 +130,7 @@ html {
   overflow: hidden;
 }
 
-.card-header .banner-image {
+.card-header .banner-img {
   width: 100%;
   height: 120px;
   background-position: center !important;
@@ -98,131 +139,142 @@ html {
   overflow: hidden;
 }
 
-.card-header .infos {
-  padding: 0 15px;
+.card-body {
+  padding: 15px;
   position: relative;
 }
 
-.card-header .infos .profil-logo {
+.card-body .profile-header {
   position: absolute;
-  top: -280%;
-  border: 6px solid #171717;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: calc(100% - 30px);
+  top: -50px;
+}
+
+.card-body .profile-header .profil-logo {
+  position: relative;
+  border: 6px solid #292b2f;
   border-radius: 50%;
 }
 
-.card-header .infos .profil-logo img {
+.card-body .profile-header .profil-logo img {
+  display: block;
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  display: block;
 }
 
-.card-header .infos .profil-logo::before {
-  opacity: 0;
-  cursor: pointer;
+.card-body .profile-header .profil-logo::before {
+  content: "See Profil";
   position: absolute;
   right: 0;
   top: 0;
+  cursor: pointer;
+  opacity: 0;
   width: 100%;
   height: 100%;
-  content: "See Profil";
   color: #eeeeee;
   background: #0000007e;
-  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   transition-duration: 0.15s;
 }
 
-.card-header .infos .profil-logo:hover::before {
+.card-body .profile-header .profil-logo:hover::before {
   opacity: 1;
 }
 
-.card-header .infos .badges-container {
-  position: absolute;
-  top: -120%;
-  right: 0;
-  padding: inherit;
+.card-body .profile-header .badges-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  width: 150px;
+  max-width: 150px;
+  background: #18191c;
+  border-radius: 7px;
+  padding: 3px;
 }
 
-.card-header .infos .badges-container .badge-item {
+.card-body .profile-header .badges-container .badge-item {
   position: relative;
-  margin-left: 8px;
-  margin-bottom: 5px;
+  margin: 5px;
   width: 15px;
   height: 15px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.card-header .infos .badges-container .badge-item img {
+.card-body .profile-header .badges-container .badge-item img {
   height: 100%;
 }
 
-.card-header .infos .badges-container .badge-item:hover > .tooltip {
+.card-body .profile-header .badges-container .badge-item:hover > .tooltip {
   display: block;
 }
 
-.card-header .infos .username {
+.card-body .profile-body {
+  background: #18191c;
+  border-radius: 7px;
+  padding: 13px;
+  margin-top: 40px;
+}
+
+.card-body .profile-body .username {
   color: #eeeeee;
-  margin-top: 55px;
-  margin-bottom: 10px;
+  margin-bottom: 13px;
   font-weight: 600;
   font-size: 1.3rem;
 }
 
-.card-header .infos .username span {
-  font-weight: 500;
-  color: #8f8f8f;
+.card-body .profile-body .username span {
+  color: #b9bbbe;
 }
 
-.card-header .infos hr {
-  border: 1px solid #212121;
+.card-body .profile-body hr {
+  border: none;
+  border-top: 0.5px solid #33353b;
 }
 
-.card-content {
-  padding: 0 15px;
-}
-
-.card-content .category-title {
-  color: #c2c2c2;
-  font-weight: 600;
+.card-body .profile-body .category-title {
+  color: white;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 0.85rem;
-  margin-bottom: 10px;
+  font-size: 0.8rem;
+  margin-bottom: 8px;
 }
 
-.card-content .about-me {
-  margin-bottom: 12px;
-  margin-top: 10px;
+.card-body .profile-body .basic-infos {
+  margin-bottom: 14px;
+  margin-top: 12px;
 }
 
-.card-content .about-me p {
-  color: #eee;
+.card-body .profile-body .basic-infos p {
+  color: #bdbebf;
   font-size: 0.9rem;
 }
 
-.card-content .roles {
-  margin-bottom: 12px;
+.card-body .profile-body .roles {
+  margin-bottom: 14px;
 }
 
-.card-content .roles .roles-list {
+.card-body .profile-body .roles .roles-list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.card-content .roles .roles-list .role {
-  background: #353535;
+.card-body .profile-body .roles .roles-list .role {
+  background: #292b2f;
   color: #f5f5f5;
-  border-radius: 2px;
+  border-radius: 3px;
   font-size: 0.85rem;
   font-weight: 300;
   padding: 3px 6px;
@@ -233,86 +285,73 @@ html {
   flex-direction: row;
 }
 
-.card-content .roles .roles-list .role .color {
+.card-body .profile-body .roles .roles-list .role .role-color {
   width: 11px;
   height: 11px;
   border-radius: 50%;
   margin-right: 5px;
 }
 
-.card-content .note {
-  margin-bottom: 15px;
-}
-
-.card-content .note textarea {
+.card-body .profile-body .note textarea {
   border: none;
   outline: none;
-  background: #171717;
+  background: #18191c;
   width: 100%;
   min-height: 30px;
   color: #e0e0e0;
   resize: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   border-radius: 3px;
   padding: 5px;
   box-sizing: border-box;
   scrollbar-width: none;
-  font-family: "Whitney", sans-serif;
 }
 
-.card-content .note textarea::-webkit-scrollbar {
+.card-body .profile-body .note textarea::-webkit-scrollbar {
   display: none;
 }
 
-.card-content .note textarea::placeholder {
-  font-size: 0.7rem;
+.card-body .profile-body .note textarea::placeholder {
+  font-size: 0.8rem;
 }
 
-.card-content .note textarea:focus {
-  background: #1f1f1f;
+.card-body .profile-body .note textarea:focus::placeholder {
+  opacity: 0;
 }
 
-.card-footer {
-  padding: 0 15px 15px 15px;
-}
-
-.card-footer input {
-  background: #353535;
+.card-body .profile-body .message input {
+  background: #18191c;
   outline: none;
   border: 1.2px solid #333333;
-  padding: 10px;
+  padding: 13px;
   width: 100%;
-  box-sizing: border-box;
-  border-radius: 3px;
+  border-radius: 4px;
   color: #eeeeee;
-  transition-duration: 0.3s;
+  margin-top: 14px;
 }
 
-.card-footer input:focus {
-  border-color: orange;
-}
-
-@media screen and (max-width: 1400px) {
+/* Media Queries */
+@media screen and (max-width: 1470px) {
   .card-container {
-    width: 960px;
+    width: 1100px;
   }
   .card:last-child {
     display: none;
   }
 }
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1150px) {
   .card-container {
-    width: 650px;
+    width: 720px;
   }
   .card:nth-child(3) {
     display: none;
   }
 }
 
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 770px) {
   .card-container {
-    width: 300px;
+    width: max-content;
   }
   .card:nth-child(2) {
     display: none;
