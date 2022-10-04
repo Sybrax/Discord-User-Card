@@ -26,6 +26,16 @@ The card when you click on a user in a discord server.
 
 Demo : <a href="https://sybrax.github.io/Discord-User-Card/">here</a>
 
+Download : <a href="https://github.com/Sybrax/Discord-User-Card/releases/tag/v2.0.0">here</a>
+
+## Old version preview :
+
+<img src="https://i.imgur.com/s2hTmWR.png">
+
+Download : <a href="https://github.com/Sybrax/Discord-User-Card/releases/tag/v1.0.0">here</a> ( Non-optimized code )
+
+## Community :
+
 Join creators-area to see more of the community:  : <a href="https://discord.gg/fHYmhV3r3k">here</a>
 
 ## Author :
