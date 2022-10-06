@@ -2,16 +2,6 @@
 @import url("../font/style.css");
 @import url("https://sybraxdesign.fr/api/github/version.css");
 
-/* Animations */
-@keyframes popAnim {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
 /* General */
 * {
   margin: 0;
@@ -30,16 +20,17 @@ html {
 }
 
 .tooltip {
-  display: none;
+  display: block;
   position: absolute;
-  color: #eeeeee;
+  color: #b6b7b7;
   background: #18191c;
   padding: 0.4rem;
   border-radius: 3px;
   max-width: 150px;
   width: max-content;
   font-size: 0.9rem;
-  animation: popAnim 0.035s linear;
+  transform: scale(0);
+  transition: 0.055s ease-in-out transform;
   z-index: 10;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
   -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.35);
@@ -66,12 +57,13 @@ html {
   position: absolute;
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   z-index: 100;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(5px);
+  visibility: hidden;
 }
 
 .modal {
@@ -80,7 +72,8 @@ html {
   padding: 15px;
   color: #eee;
   border-radius: 5px;
-  animation: popAnim 0.035s linear;
+  transform: scale(0);
+  transition: 0.1s ease-in-out all;
 }
 
 .modal a {
@@ -96,7 +89,11 @@ html {
 }
 
 .active {
-  display: flex;
+  visibility: visible;
+}
+
+.active .modal {
+  transform: scale(1);
 }
 
 /* Card */
@@ -218,7 +215,7 @@ html {
 }
 
 .card-body .profile-header .badges-container .badge-item:hover > .tooltip {
-  display: block;
+  transform: scale(1);
 }
 
 .card-body .profile-body {
