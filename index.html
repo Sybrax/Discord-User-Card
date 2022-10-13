@@ -55,27 +55,30 @@
               <div class="roles-list">
                 <div class="role">
                   <div class="role-color" style="background: orange"></div>
-                  Role title
+                  <p>Role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: violet"></div>
-                  A long role title
+                  <p>A long role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: green"></div>
-                  A very very very very long role title
+                  <p>A very very very very long role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: yellow"></div>
-                  Role title
+                  <p>Role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: yellowgreen"></div>
-                  Role title
+                  <p>Role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: turquoise"></div>
-                  Role title
+                  <p>Role title</p>
+                </div>
+                <div class="role role-add">
+                  <div class="role-add-text">+</div>
                 </div>
               </div>
             </div>
@@ -132,27 +135,30 @@
               <div class="roles-list">
                 <div class="role">
                   <div class="role-color" style="background: orange"></div>
-                  Role title
+                  <p>Role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: violet"></div>
-                  A long role title
+                  <p>A long role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: green"></div>
-                  A very very very very long role title
+                  <p>A very very very very long role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: yellow"></div>
-                  Role title
+                  <p>Role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: yellowgreen"></div>
-                  Role title
+                  <p>Role title</p>
                 </div>
                 <div class="role">
                   <div class="role-color" style="background: turquoise"></div>
-                  Role title
+                  <p>Role title</p>
+                </div>
+                <div class="role role-add">
+                  <div class="role-add-text">+</div>
                 </div>
               </div>
             </div>
@@ -260,15 +266,28 @@
         </div>
       </div>
     </div>
+    <!-- Elements below can be removed ( they are just for the demo ) -->
     <div class="modal-container">
       <div class="modal">
-        Action done! Any question ?
-        <a href="https://discord.gg/dJFFpaQ" target="_blank"
-          >Join our Discord</a
-        >
-        :)
+        <div class="modal-header">
+          Modal open! Any question ?
+          <a href="https://discord.gg/dJFFpaQ" target="_blank"
+            >Join our Discord</a
+          >
+          or visit our
+          <a href="https://sybraxdesign.fr" target="_blank">website</a> :)
+        </div>
+        <div class="modal-body">
+          <input
+            id="feedback-input"
+            type="text"
+            placeholder="Send feedback ( optional )..."
+          />
+          <div class="feedback-state"></div>
+        </div>
       </div>
     </div>
-    <script src="./assets/js/main.js"></script>
+    <div class="help-btn">?</div>
+    <script src="./assets/js/demo.js"></script>
   </body>
 </html>
