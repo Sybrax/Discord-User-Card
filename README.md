@@ -10,15 +10,16 @@
 
 The card when you click on a user in a discord server.
 
-+ Banner & Logo
-+ Badges with tooltip
-+ Username
-+ About Me
-+ Member since
-+ Roles
-+ Note
-+ Send message input
-+ Basic JavaSript for the demo
+- Banner & Logo
+- Badges with tooltip
+- Buttons
+- Username
+- About Me
+- Member since
+- Roles
+- Note
+- Send message input
+- Basic JavaSript for the demo
 
 ## Preview :
 
@@ -36,7 +37,7 @@ Download : <a href="https://github.com/Sybrax/Discord-User-Card/releases/tag/v1.
 
 ## Community :
 
-Join creators-area to see more of the community:  : <a href="https://discord.gg/fHYmhV3r3k">here</a>
+Join creators-area to see more of the community: : <a href="https://discord.gg/fHYmhV3r3k">here</a>
 
 ## Author :
 

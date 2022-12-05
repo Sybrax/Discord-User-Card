@@ -52,6 +52,24 @@ html {
   border-top: 6px solid #18191c;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #6d5cff;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 0.85rem;
+  transition: 0.2s ease-in-out;
+  margin-top: 12px;
+}
+
+.btn:hover {
+  background-color: #4752c4;
+}
+
 /* Card */
 .card-container {
   display: flex;
@@ -186,10 +204,24 @@ html {
   margin-bottom: 13px;
   font-weight: 600;
   font-size: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .card-body .profile-body .username span {
   color: #b9bbbe;
+}
+
+.card-body .profile-body .username .badge {
+  font-size: 0.65rem;
+  background-color: #5865f2;
+  text-transform: uppercase;
+  font-weight: 300;
+  width: max-content;
+  padding: 2px 5px;
+  margin-left: 5px;
+  border-radius: 3px;
 }
 
 .card-body .profile-body hr {
@@ -213,6 +245,15 @@ html {
 .card-body .profile-body .basic-infos p {
   color: #bdbebf;
   font-size: 0.9rem;
+}
+
+.card-body .profile-body .basic-infos p a {
+  color: #02a5e6;
+  text-decoration: none;
+}
+
+.card-body .profile-body .basic-infos p a:hover {
+  text-decoration: underline;
 }
 
 .card-body .profile-body .roles {
