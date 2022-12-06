@@ -23,7 +23,7 @@ The card when you click on a user in a discord server.
 
 ## Preview :
 
-<img src="https://i.imgur.com/J2WIRCs.png">
+<img src="https://i.imgur.com/Ccsviuz.png">
 
 Demo : <a href="https://sybrax.github.io/Discord-User-Card/">here</a>
 
