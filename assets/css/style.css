@@ -353,7 +353,7 @@ html {
 
 .nitro-card {
   position: relative;
-  background-image: linear-gradient(0, #9b5300, #ee830a);
+  background-image: linear-gradient(0, #030d2c, #244ed8);
   background-blend-mode: multiply;
   background-color: #0000006c;
 }
@@ -367,12 +367,12 @@ html {
   left: 0;
   z-index: -1;
   margin: -5px;
-  border-radius: 11px;
-  background: linear-gradient(180deg, #9b5300, #ee830a);
+  border-radius: 12px;
+  background: linear-gradient(0, #030d2c, #244ed8);
 }
 
 .nitro-card .card-body .profile-body {
-  background: #18191c77;
+  background: #18191c91;
 }
 
 .nitro-card .card-body .profile-header .profil-logo {
@@ -391,7 +391,7 @@ html {
   z-index: -1;
   margin: -6px;
   border-radius: 50%;
-  background: #804605;
+  background-color: #11266a;
 }
 
 .nitro-card .card-body .profile-header .badges-container {
@@ -400,7 +400,7 @@ html {
 
 .nitro-card .card-body .profile-body .roles .roles-list .role {
   background: #18191c4d;
-  border: 1px solid #42454d;
+  border: 1px solid #3f4149;
 }
 
 /* Media Queries */
