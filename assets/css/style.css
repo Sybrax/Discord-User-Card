@@ -353,7 +353,7 @@ html {
 
 .nitro-card {
   position: relative;
-  background-image: linear-gradient(0, #030d2c, #244ed8);
+  background-image: linear-gradient(0, #05172e, #114aa7);
   background-blend-mode: multiply;
   background-color: #0000006c;
 }
@@ -368,7 +368,7 @@ html {
   z-index: -1;
   margin: -5px;
   border-radius: 12px;
-  background: linear-gradient(0, #030d2c, #244ed8);
+  background: linear-gradient(0, #05172e, #114aa7);
 }
 
 .nitro-card .card-body .profile-body {
@@ -391,7 +391,7 @@ html {
   z-index: -1;
   margin: -6px;
   border-radius: 50%;
-  background-color: #11266a;
+  background-color: #082553;
 }
 
 .nitro-card .card-body .profile-header .badges-container {
