@@ -6,6 +6,10 @@
   </p>
 </body>
 
+## NEW REALEASE :
+
+A version of this card with spotify live activity is available here : <a href="https://github.com/Sybrax/Discord_User_Card_Spotify_App" target="_blank">check it out !</a> !
+
 ## Description :
 
 The card when you click on a user in a discord server.
